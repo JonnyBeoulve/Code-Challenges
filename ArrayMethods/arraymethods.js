@@ -37,7 +37,7 @@ let spaceXFlights = [
 
 // This function will print out all values within an array for demo purposes
 printArrayValues = (array, arrayName) => {
-    console.log(`=== ${arrayName} ===`)
+    console.log(`\n=== ${arrayName} ===`)
     for (let i = 0; i < array.length; i++) console.log(array[i]);
     console.log("==============================")
 }
@@ -65,7 +65,7 @@ const flightMissionsIn2008 = spaceXFlights.filter((flight) => {
 printArrayValues(flightMissionsIn2008, 'flightMissionsIn2008');
 
 //Some: Output whether or not a mision with the name Trailblazer exists in the array
-console.log('Does Trailblazer exist in the array? ' + spaceXFlights.some(flight => flight.mission_name === 'Trailblazer'));
+console.log('\nDoes Trailblazer exist in the array? ' + spaceXFlights.some(flight => flight.mission_name === 'Trailblazer'));
 
 //Some: Output whether or not every flight has a flight number
-console.log('Does every flight have a flight number? ' + spaceXFlights.every(flight => flight.flight_number));
+console.log('\nDoes every flight have a flight number? ' + spaceXFlights.every(flight => flight.flight_number));
