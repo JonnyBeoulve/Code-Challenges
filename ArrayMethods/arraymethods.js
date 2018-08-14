@@ -17,7 +17,7 @@ let spaceXFlights = [
     }, 
     { 
         flight_number: 3,
-        mission_name: "Trailblrazer",
+        mission_name: "Trailblazer",
         launch_year: "2008",
         mission_patch: 'https://images2.imgbox.com/4b/bd/d8UxLh4q_o.png'
     }, 
@@ -36,27 +36,36 @@ let spaceXFlights = [
 ]
 
 // This function will print out all values within an array for demo purposes
-printArrayValues = (array) => {
-    console.log("=== PRINTING ARRAY VALUES ===")
+printArrayValues = (array, arrayName) => {
+    console.log(`=== ${arrayName} ===`)
     for (let i = 0; i < array.length; i++) console.log(array[i]);
-    console.log("=============================")
+    console.log("==============================")
 }
+
+// For every element in the array, output the mission name
+spaceXFlights.forEach(flight => console.log(`${flight.flight_number}. ${flight.mission_name}`));
 
 // Map: Create a new aray containing only the mission patch URLs for each flight
 const flightMissionPatches = spaceXFlights.map((flight) => { return flight.mission_patch;});
-printArrayValues(flightMissionPatches);
+printArrayValues(flightMissionPatches, 'flightMissionPatches');
 
 // Sort: Create a new array containing all flights alphabetically by mission name
-const flightMissionNamesAlpha = spaceXFlights.sort((a, b) => {
+const flightMissionNamesAsc = spaceXFlights.sort((a, b) => {
     if (a.mission_name < b.mission_name) return -1;
     else if (a.mission_name > b.mission_name) return 1;
     else return 0;
 });
-printArrayValues(flightMissionNamesAlpha);
+printArrayValues(flightMissionNamesAsc, 'flightMissionNamesAsc');
 
 // Filter: Create a new array containing all flights that occurred in 2008
 const flightMissionsIn2008 = spaceXFlights.filter((flight) => {
     if (flight.launch_year === '2008') return true;
     else return false;
 })
-printArrayValues(flightMissionsIn2008);
+printArrayValues(flightMissionsIn2008, 'flightMissionsIn2008');
+
+//Some: Output whether or not a mision with the name Trailblazer exists in the array
+console.log('Does Trailblazer exist in the array? ' + spaceXFlights.some(flight => flight.mission_name === 'Trailblazer'));
+
+//Some: Output whether or not every flight has a flight number
+console.log('Does every flight have a flight number? ' + spaceXFlights.every(flight => flight.flight_number));
