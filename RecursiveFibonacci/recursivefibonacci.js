@@ -2,7 +2,7 @@
 // This function will perform a fibonacci sequence for n length using
 // recursion.
 =======================================================================*/
-recursiveFibonacci = (num) => {
+function recursiveFibonacci(num) {
     if (num === 1) return [0, 1];
     else {
         let tempNum = recursiveFibonacci(num - 1);

@@ -36,7 +36,7 @@ let spaceXFlights = [
 ]
 
 // This function will print out all values within an array for demo purposes
-printArrayValues = (array, arrayName) => {
+function printArrayValues(array, arrayName) {
     console.log(`\n=== ${arrayName} ===`)
     for (let i = 0; i < array.length; i++) console.log(array[i]);
     console.log("==============================")

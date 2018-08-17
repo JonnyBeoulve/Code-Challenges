@@ -1,7 +1,7 @@
 /*=======================================================================
 // This function will perform factorial using recusion in JavaScript.
 =======================================================================*/
-factorial = (n) => {
+function factorial(n) {
     if (n < 0) return undefined;
     else if ((n % 1) != 0) return undefined;
     else if ((n === 1) || (n === 0)) return 1;

@@ -1,7 +1,7 @@
 /*=======================================================================
 // This function will simply reverse a string in JavaScript.
 =======================================================================*/
-reverseString = (str) => {
+function reverseString(str) {
     let reversedString = '';
 
     if (str.length < 2) return undefined;

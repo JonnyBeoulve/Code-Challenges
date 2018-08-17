@@ -3,7 +3,7 @@
 // determine what word recurs the most often within the array. This
 // string will be returned from the function.
 =======================================================================*/
-findMostCommonString = (arrayOfStrings) => {
+function findMostCommonString(arrayOfStrings) {
     stringCountArray = []; // Array of objects that will store one of each word along with a counter
     winningStringIndex = 0; // The current winning index, used in the second for loop
 

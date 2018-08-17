@@ -3,7 +3,7 @@
 // beginning and ending fibonacci numbers. The function will determine
 // all fibonacci numbers between and included the passed in numbers.
 =======================================================================*/
-findFibonacciRange = (beginningNum, endingNum) => {
+function findFibonacciRange(beginningNum, endingNum) {
     let fibRangeArray = []; // An array that stores all fibonacci numbers found in the range
     let currentNum = 1; // The current number being evaluated
     let previousNum = 0; // The previous number to be evaluated
@@ -38,7 +38,7 @@ findFibonacciRange = (beginningNum, endingNum) => {
 /*=======================================================================
 // This function will print out the range for the user to see.
 =======================================================================*/
-printFibonacciRange = (fibonacciRange) => {
+function printFibonacciRange(fibonacciRange) {
     for (let i = 0; i < fibonacciRange.length; i++) {
         if (i === 0) console.log("\n=== ALL NUMBERS IN FIBONACCI RANGE ===\n");
         console.log(`\t\t${fibonacciRange[i]}\n`);

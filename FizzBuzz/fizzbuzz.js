@@ -6,7 +6,7 @@
 // multiples of five print “Buzz”. For numbers which are multiples of 
 // both three and five print “FizzBuzz”."
 =======================================================================*/
-fizzBuzz = () => {
+function fizzBuzz() {
     console.log("==== Begin Fizz Buzz ====")
     for (let i = 1; i <= 100; i++) {
         if (i % 15 === 0) console.log(`${i}. Fizz Buzz`);

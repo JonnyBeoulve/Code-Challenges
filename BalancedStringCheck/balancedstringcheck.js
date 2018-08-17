@@ -4,7 +4,7 @@
 // with all left-sided parenthesis and brackets having matching
 // right-sided parenthesis and brackets.
 ======================================================================*/
-balancedStringChecker = (str) => {
+function balancedStringChecker(str) {
     const inputExpression = str.split(''); // Delineate passed in string
     const openExpression = ['{', '(']; // Array of opening expressions for evaluation
     const closeExpression = [')', '}']; // Array of closing expressions for evaluation

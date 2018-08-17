@@ -23,7 +23,7 @@ hoistingArrowFunction();
 // is ever declared. Then, at the bottom of the function scope we 
 // declare the variable. Yet, it works, and the console.log will
 // indeed output the value of 5.
-hoistingVarVariables = () => {
+function hoistingVarVariables() {
     x = 5;
 
     console.log(`\nThe variable x declared using var equals ${x}.`);
@@ -37,7 +37,7 @@ hoistingVarVariables();
 // introduced in ES6. Thus, we will need to place our declarations
 // before assignments or calls when using let. Below is the correct
 // order of operations.
-hoistingLetVariables = () => {
+function hoistingLetVariables() {
     let y;
 
     y = 5;

@@ -13,7 +13,7 @@ let flight66 = {
 }
 
 // First class function
-countdownLiftoff = () => {
+function countdownLiftoff() {
     setTimeout(() => {
         console.log("\n10 seconds until liftoff.")
     }, 1000);
@@ -28,7 +28,7 @@ countdownLiftoff = () => {
 }
 
 // This function takes in an object and a first class function
-beginLiftoffSequence = (flight, countdown) => {
+function beginLiftoffSequence(flight, countdown) {
     console.log("\nPerforming final check before liftoff sequence.")
 
     if (flight.ready_for_launch === true) countdown();

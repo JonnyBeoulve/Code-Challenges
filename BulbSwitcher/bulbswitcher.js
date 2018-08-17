@@ -5,7 +5,7 @@
 // off -> on). On the nth round, you only toggle the last bulb. Find out
 // how many bulbs are on after n rounds.
 =======================================================================*/
-bulbSwitcher = (n) => {
+function bulbSwitcher(n) {
     let bulbArray = []; // Empty array for bulbs
     let round = 1; // Determine which round
     let bulbOnCount = 0; // Counter for bulbs on

@@ -26,7 +26,7 @@ const contact = new Promise ((resolve, reject) => {
 
 // In this function we will evaluate if contact sends back a resolve or
 // reject. We will then log the response accordingly.
-contactHQ = () => {
+function contactHQ() {
     contact
         .then ((response) => {
             console.log(`=============== TRANSMISSION ===============

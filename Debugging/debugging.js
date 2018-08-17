@@ -7,7 +7,7 @@
 // evaluation the references for the objects are compared, not the 
 // values. In JavaScript all objects have their own reference, even
 // if their values are identical.
-checkIfFalconHeavy = (rocket) => {
+function checkIfFalconHeavy(rocket) {
     if (rocket == { type: 'Falcon Heavy' }) return console.log('\nFalcon Heavy confirmed.');
     else return console.log('\nRocket isn\'t Falcon Heavy.');
 }
@@ -15,7 +15,7 @@ checkIfFalconHeavy = (rocket) => {
 checkIfFalconHeavy({ type: 'Falcon Heavy' });
 
 // Below is how we avoid the problem above
-checkIfFalconHeavyDebugged = (rocket) => {
+function checkIfFalconHeavyDebugged(rocket) {
     if (rocket.type === 'Falcon Heavy' ) return console.log('\nFalcon Heavy confirmed.');
     else return console.log('\nRocket isn\'t Falcon Heavy.');
 }
@@ -29,7 +29,7 @@ checkIfFalconHeavyDebugged({ type: 'Falcon Heavy' });
 // evaluate as truthy: true, {}, [], 7, -7 'rocket. In contrast, these are
 // values that will evaluate as falsy: false, null, undefined, 0, NaN,
 // ''.
-checkIfEmptyObject = (object) => {
+function checkIfEmptyObject(object) {
     if (!object) return console.log('\nObject is empty.');
     else if (object) return console.log('\nObject is not empty.');
 }

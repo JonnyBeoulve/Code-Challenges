@@ -3,7 +3,7 @@
 // would like to be returned from Pascal's Triangle. A Pascal's Triangle
 // is a triangular array of binomial coefficients.
 =======================================================================*/
-pascalsTriangle = (numRows) => {
+function pascalsTriangle(numRows) {
     let pascalArray = []; // Array to store full pascal triangle
 
     for (let i = 0; i < numRows; i++) { // For each row
@@ -19,7 +19,7 @@ pascalsTriangle = (numRows) => {
 }
 
 // Display psuedo 2D array in console.
-outputPascalsTriangle = (pascalArr) => {
+function outputPascalsTriangle(pascalArr) {
     console.log('\n' + JSON.stringify(pascalArr) + '\n');
 }
 

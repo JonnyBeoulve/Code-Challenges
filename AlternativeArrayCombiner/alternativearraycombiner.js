@@ -5,7 +5,7 @@
 // populated a new array. Any leftover elements from the larger array
 // will then be pushed to the end.
 ======================================================================*/
-alternativelyCombineArrays = (arr1, arr2) => {
+function alternativelyCombineArrays(arr1, arr2) {
     let combinedArray = []; // Array that stores combination of both passed-in arrays
     let currentIndex = 0; // Begin function-scoped index at 0
 

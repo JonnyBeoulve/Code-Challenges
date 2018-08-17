@@ -2,7 +2,7 @@
 // This function will return a reference to a function that contains
 // a closure used for outputting a concatenated first and last name.
 =======================================================================*/
-fullName = (fName, lName) => {
+function fullName(fName, lName) {
     // Concatenate passed-in names
     let fullName = `${fName} ${lName}`;
     
