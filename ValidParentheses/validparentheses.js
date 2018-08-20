@@ -6,8 +6,8 @@
 ======================================================================*/
 function balancedStringChecker(str) {
     const inputExpression = str.split(''); // Delineate passed in string
-    const openExpression = ['{', '(']; // Array of opening expressions for evaluation
-    const closeExpression = [')', '}']; // Array of closing expressions for evaluation
+    const openExpression = ['(', '}', '[']; // Array of opening expressions for evaluation
+    const closeExpression = [')', '}', ']']; // Array of closing expressions for evaluation
     const evaluatorArray = [];
 
     // Loop through all string indexes and either push or pop to evaluator Array. If any items
@@ -26,6 +26,8 @@ function balancedStringChecker(str) {
 }
 
 // Run checker
-balancedStringChecker("({})");
-balancedStringChecker("({)");
-balancedStringChecker("({{}})");
+balancedStringChecker("()"); // Should pass
+balancedStringChecker("()[]{}"); // Should pass
+balancedStringChecker("(]"); // Should fail
+balancedStringChecker("([)]"); //Should fail
+balancedStringChecker("{[]}"); //Should pass
