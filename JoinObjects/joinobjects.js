@@ -18,7 +18,7 @@ function joinObjects(arr1, arr2) {
         }
     }
 
-    return newArr
+    return newArr;
 }
 
 // Define the two array of objects.

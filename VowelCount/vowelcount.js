@@ -6,7 +6,7 @@
 // of the stack to determine its content before modifying the stack.
 =======================================================================*/
 function vowelCounter(str) {
-    let vowels = ['a', 'e', 'i', 'o', 'u']; // Array of vowels for evaluation
+    const vowels = ['a', 'e', 'i', 'o', 'u']; // Array of vowels for evaluation
     let count = 0; // Increment per vowel found
 
     // Loop through each letter of string and check if equal to vowel
