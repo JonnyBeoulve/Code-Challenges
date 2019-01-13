@@ -19,10 +19,18 @@ function balancedStringChecker(str) {
     // are left in the array upon completion, then there are unclosed expressions and the test
     // will fail.
     for (let i in str) {
-        if (openExpression.indexOf(inputExpression[i]) > -1) evaluatorArray.push(inputExpression[i]);
+        if (openExpression.indexOf(inputExpression[i]) > -1) {
+            console.log(`Open Expression Match: ${inputExpression[i]}`)
+            evaluatorArray.push(inputExpression[i]);
+        }
         if (closeExpression.indexOf(inputExpression[i]) > -1) {
             let strToMatch = evaluatorArray.pop();
-            if (expressionMatch[str[i]] != strToMatch) return console.log(`\nFAIL! Expression '${str}' is not balanced.\n`);
+            console.log(`strToMatch: ${strToMatch}`);
+            console.log(`str[i]: ${str[i]}`);
+            console.log(`expressionMatch: ${expressionMatch[str[i]]}`);
+            if (expressionMatch[str[i]] != strToMatch) {
+                return console.log(`\nFAIL! Expression '${str}' is not balanced.\n`);
+            }
         }
     }
 
