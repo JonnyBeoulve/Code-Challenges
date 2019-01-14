@@ -14,9 +14,52 @@ class Graph {
 
     // Check if the graph contains the passed-in vertex.
     exists(node) {
-        return !!this.vertices[node];
+        return Boolean(this.vertices[node]);
+    }
+
+    // Add a new vertex to the array with no edges.
+    addVertex(node) {  
+        if (!this.exists(node)) {
+            this.vertices[node] = { edges: {} };
+        }
+    }
+
+    // Locate a vertex and remove all its connections before removing the vertex.
+    removeVertex(node) {
+        if (this.exists(node)) {
+            for (let connection in this.vertices[node].edges) {
+                this.removeEdge(node, connection);
+            }
+            delete this.vertices[node];
+        }
+    }
+
+    // Add an edge between two passed-in vertices.
+    addEdge(nodeA, nodeB) {
+        if (this.exists(nodeA) && this.exists(nodeB)){
+            this.vertices[nodeA].edges[nodeB] = true;
+            this.vertices[nodeB].edges[nodeA] = true;
+        }
+    }
+    
+    // Remove an edge between two passed-in vertices.
+    removeEdge(nodeA, nodeB) {
+        if(this.exists(nodeA) && this.exists(nodeB)){
+            delete this.vertices[nodeA].edges[nodeB]
+            delete this.vertices[nodeB].edges[nodeA]
+        }
     }
 }
 
-// Instantiate a graph.
+/* Here, we will instantiate a graph, add verteces to it, remove a vertex, add an edge between verteces 
+with ID of 71 and 73 before logging the value of vertex 73. We will then remove vertex 71 and output
+vertex 73's value to indicate that its connection to the now non-existent index 71 has been deleted. */
 let boringTunnelGraph = new Graph();
+boringTunnelGraph.addVertex(71);
+boringTunnelGraph.addVertex(72);
+boringTunnelGraph.addVertex(73);
+boringTunnelGraph.removeVertex(72);
+boringTunnelGraph.addEdge(71, 73);
+console.log(boringTunnelGraph.vertices[73]);
+boringTunnelGraph.removeVertex(71);
+console.log(boringTunnelGraph.vertices[73]);
