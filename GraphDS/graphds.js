@@ -8,47 +8,47 @@ and edges will be their routes. This will theoretically allow for us to determin
 addition of edges, we could employ an algorithm such as Dijkstra's to determine the shortest path
 between two nodes. */
 class Graph {
-    constructor() {
-        this.vertices = []; // This will house the various vertices containing data.
-    }
+  constructor() {
+    this.vertices = []; // This will house the various vertices containing data.
+  }
 
-    // Check if the graph contains the passed-in vertex.
-    exists(node) {
-        return Boolean(this.vertices[node]);
-    }
+  // Check if the graph contains the passed-in vertex.
+  exists(node) {
+    return Boolean(this.vertices[node]);
+  }
 
-    // Add a new vertex to the array with no edges.
-    addVertex(node) {  
-        if (!this.exists(node)) {
-            this.vertices[node] = { edges: {} };
-        }
+  // Add a new vertex to the array with no edges.
+  addVertex(node) {
+    if (!this.exists(node)) {
+      this.vertices[node] = { edges: {} };
     }
+  }
 
-    // Locate a vertex and remove all its connections before removing the vertex.
-    removeVertex(node) {
-        if (this.exists(node)) {
-            for (let connection in this.vertices[node].edges) {
-                this.removeEdge(node, connection);
-            }
-            delete this.vertices[node];
-        }
+  // Locate a vertex and remove all its connections before removing the vertex.
+  removeVertex(node) {
+    if (this.exists(node)) {
+      for (let connection in this.vertices[node].edges) {
+        this.removeEdge(node, connection);
+      }
+      delete this.vertices[node];
     }
+  }
 
-    // Add an edge between two passed-in vertices.
-    addEdge(nodeA, nodeB) {
-        if (this.exists(nodeA) && this.exists(nodeB)){
-            this.vertices[nodeA].edges[nodeB] = true;
-            this.vertices[nodeB].edges[nodeA] = true;
-        }
+  // Add an edge between two passed-in vertices.
+  addEdge(nodeA, nodeB) {
+    if (this.exists(nodeA) && this.exists(nodeB)) {
+      this.vertices[nodeA].edges[nodeB] = true;
+      this.vertices[nodeB].edges[nodeA] = true;
     }
-    
-    // Remove an edge between two passed-in vertices.
-    removeEdge(nodeA, nodeB) {
-        if(this.exists(nodeA) && this.exists(nodeB)){
-            delete this.vertices[nodeA].edges[nodeB]
-            delete this.vertices[nodeB].edges[nodeA]
-        }
+  }
+
+  // Remove an edge between two passed-in vertices.
+  removeEdge(nodeA, nodeB) {
+    if (this.exists(nodeA) && this.exists(nodeB)) {
+      delete this.vertices[nodeA].edges[nodeB];
+      delete this.vertices[nodeB].edges[nodeA];
     }
+  }
 }
 
 /* Here, we will instantiate a graph, add verteces to it, remove a vertex, add an edge between verteces 

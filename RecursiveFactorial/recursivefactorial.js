@@ -2,10 +2,10 @@
 // This function will perform factorial using recusion in JavaScript.
 =======================================================================*/
 function factorial(n) {
-    if (n < 0) return undefined;
-    else if ((n % 1) != 0) return undefined;
-    else if ((n === 1) || (n === 0)) return 1;
-    else return n * factorial (n - 1);
+  if (n < 0) return undefined;
+  else if (n % 1 != 0) return undefined;
+  else if (n === 1 || n === 0) return 1;
+  else return n * factorial(n - 1);
 }
 
 // Perform factorial on various numbers and output their value for demonstration

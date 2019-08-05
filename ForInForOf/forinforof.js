@@ -3,14 +3,14 @@
 // work in JavaScript.
 =======================================================================*/
 let spaceXFlights = [
-    'EchoStar 23',
-    'SES-10',
-    'NROL-76',
-    'Inmarsat-5 F4',
-    'CRS-11'
-]
+  "EchoStar 23",
+  "SES-10",
+  "NROL-76",
+  "Inmarsat-5 F4",
+  "CRS-11"
+];
 
-spaceXFlights.apiURL = 'https://api.spacexdata.com/v2/launches';
+spaceXFlights.apiURL = "https://api.spacexdata.com/v2/launches";
 
 // for... in loops over enumerable property names of an object.
 for (let i in spaceXFlights) console.log(i);
