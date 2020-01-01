@@ -6,26 +6,30 @@
 // of the stack to determine its content before modifying the stack.
 =======================================================================*/
 class Stack {
-    constructor() {
-        this.collection = [];
-    }
+  constructor() {
+    this.collection = [];
+  }
 
-    // Push entity to end of stack
-    push(entity) {
-        console.log(`\n${entity} added to end of stack.`);
-        this.collection.push(entity);
-    }
+  // Push entity to end of stack
+  push(entity) {
+    console.log(`\n${entity} added to end of stack.`);
+    this.collection.push(entity);
+  }
 
-    // View entity at end of stack without modification
-    peek() {
-        return this.collection[this.collection.length - 1]
-    }
+  // View entity at end of stack without modification
+  peek() {
+    return this.collection[this.collection.length - 1];
+  }
 
-    // Pop the item at the end of the stack
-    pop() {
-        console.log(`\nPopping ${this.collection[this.collection.length - 1]} from end of stack.`);
-        return this.collection.pop();
-    }
+  // Pop the item at the end of the stack
+  pop() {
+    console.log(
+      `\nPopping ${
+        this.collection[this.collection.length - 1]
+      } from end of stack.`
+    );
+    return this.collection.pop();
+  }
 }
 
 const stack1 = new Stack();
